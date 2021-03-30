@@ -1,0 +1,22 @@
+<h2 class="text-center">Student List</h2>
+
+<table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Midterm Exam</th>
+        <th scope="col">Final Exam</th>
+        <th scope="col">GPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.midTermExam}}</td>
+        <td>{{student.finalExam}}</td>
+        <td>{{student.gradePointAverage}}</td>
+      </tr>
+    </tbody>
+  </table>
