@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentCreateComponent } from './student-create/student-create.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { StudentUpdateComponent } from './student-update/student-update.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
-    StudentCreateComponent
+    StudentCreateComponent,
+    StudentUpdateComponent
   ],
   imports: [
     BrowserModule,
