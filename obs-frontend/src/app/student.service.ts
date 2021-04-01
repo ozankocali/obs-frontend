@@ -28,5 +28,9 @@ export class StudentService {
     return this.httpClient.put(`${this.baseUrl}/update`,student);
   }
 
+  deleteStudent(id:number):Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}/delete/${id}`)
+  }
+
 
 }
