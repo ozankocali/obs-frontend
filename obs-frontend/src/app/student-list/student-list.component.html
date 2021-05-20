@@ -1,27 +1,54 @@
-<h2 class="text-center">Student List</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+  integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 
-<table class="table table-sm">
-    <thead>
-      <tr>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Midterm Exam</th>
-        <th scope="col">Final Exam</th>
-        <th scope="col">GPA</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let student of students">
-        <td>{{student.firstName}}</td>
-        <td>{{student.lastName}}</td>
-        <td>{{student.midTermExam}}</td>
-        <td>{{student.finalExam}}</td>
-        <td>{{student.gradePointAverage}}</td>
-        <td>
-          <button (click)="updateStudent(student.id)" class="btn btn-info">Update</button>
-          <button (click)="deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Student List</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive" id="proTeamScroll" tabindex="2"
+            style="height: 400px; overflow: hidden; outline: none;">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Midterm Exam</th>
+                  <th scope="col">Final Exam</th>
+                  <th scope="col">GPA</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let student of students">
+                  <td>
+                    <h6 class="mb-0 font-13">{{student?.firstName}}</h6>
+                  </td>
+                  <td>
+                    <h6 class="mb-0 font-13">{{student?.lastName}}</h6>
+                  </td>
+                  <td>
+                    <h6 class="mb-0 font-13">{{student?.midTermExam}}</h6>
+                  </td>
+                  <td>
+                    <h6 class="mb-0 font-13">{{student?.finalExam}}</h6>
+                  </td>
+                  <td>
+                    <h6 class="mb-0 font-13">{{student?.gradePointAverage}}</h6>
+                  </td>
+                  <td>
+                    <a><i class="fas fa-pencil-alt" (click)="updateStudent(student.id)"></i></a>
+                    <a><i class="far fa-trash-alt" (click)="deleteStudent(student.id)"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
